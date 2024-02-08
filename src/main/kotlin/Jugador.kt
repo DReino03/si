@@ -21,8 +21,8 @@ class Jugador {
 
     fun puntuaCarta(cartas: MutableList<Carta>, nacionalidad: String) {
         for (c:Carta in cartas){
-            if (this.nacionalidad = "española") {
-                when (c.numero) {
+            if (this.nacionalidad == "española") {
+                when (c.getNumero().toString()) {
                     "1" -> puntaje += 11
                     "3" -> puntaje += 10
                     "12" -> puntaje += 4
@@ -31,7 +31,7 @@ class Jugador {
                     else -> puntaje += 0
                 }
             } else {
-                when (c.numero) {
+                when (c.getNumero().toString()) {
                     "1" -> puntaje += 11
                     "3" -> puntaje += 10
                     "12" -> puntaje += 4

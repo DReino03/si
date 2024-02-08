@@ -15,6 +15,10 @@
 
     }
 
+    fun getNumero(){
+        this.numero
+    }
+
     override fun toString(): String {
         return "$numero de $palo"
     }
