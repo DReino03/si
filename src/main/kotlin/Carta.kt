@@ -3,7 +3,6 @@
      protected val numero: String
      protected var color : String
 
-
     constructor(){
         this.palo = ""
         this.numero = ""

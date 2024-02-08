@@ -4,9 +4,16 @@ class BarajaFr: Carta() {
     private val baraja = mutableListOf<Carta>()
 
     init {
+
         for (palo in palos) {
             for (numero in numeros) {
-                baraja.add(Carta(palo, numero.toString()))
+                when (numero) {
+                    1 -> baraja.add(Carta(palo, "A"))
+                    11 -> baraja.add(Carta(palo, "J"))
+                    12 -> baraja.add(Carta(palo, "Q"))
+                    13 -> baraja.add(Carta(palo, "K"))
+                    else -> baraja.add(Carta(palo, numero.toString()))
+                }
             }
         }
     }

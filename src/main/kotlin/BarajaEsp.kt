@@ -2,11 +2,22 @@ class BarajaEspanola: Carta() {
     private val palos = listOf("OROS", "COPAS", "ESPADAS", "BASTOS")
     private val numeros = (1..12)
     private val baraja = mutableListOf<Carta>()
-
+    private var cartasEliminadas = mutableListOf<Carta>()
     init {
+
         for (palo in palos) {
             for (numero in numeros) {
-                baraja.add(Carta(palo, numero.toString()))
+                if (numero == 8 || numero == 9) {
+                    cartasEliminadas.add(Carta(palo, numero.toString()))
+                }
+                else{
+                    when (numero) {
+                        10 -> baraja.add(Carta(palo, "SOTA"))
+                        11 -> baraja.add(Carta(palo, "CABALLO"))
+                        12 -> baraja.add(Carta(palo, "REY"))
+                        else -> baraja.add(Carta(palo, numero.toString()))
+                    }
+                }
             }
         }
     }

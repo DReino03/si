@@ -24,7 +24,10 @@ fun main() {
     println("3). Salir")
     val opcionEscogida = scanner.next()
     when (opcionEscogida) {
-        "1" -> barajaEsp()
+        "1" -> {
+            barajaEsp()
+            Jugador(nacionalidad = "española")
+        }
         "2" -> barajaFr()
         "3" -> println("Gracias por su visita, hasta la proxima!")
         else -> println("Opción no valida. Vuelvelo a intentar por favor.")
